@@ -1,0 +1,122 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://json-schema.org/draft-07/schema",
+    "title": "Content Type Metaschema for CMS",
+    "description": "Content Type Metaschema for CMS",
+    "type": "object",
+    "definitions": {
+      "$id": {
+        "$id": "#$id",
+        "type": "string",
+        "format": "uri-reference"
+      },
+      "$schema": {
+        "$id": "#$schema",
+        "type": "string"
+      },
+      "title": {
+        "$id": "#title",
+        "type": "string",
+        "minLength": 1
+      },
+      "description": {
+        "$id": "#description",
+        "type": "string"
+      },
+      "$ref": {
+        "$id": "#$ref",
+        "type": "string",
+        "format": "uri-reference"
+      },
+      "maximum": {
+        "$id": "#maximum",
+        "type": "number"
+      },
+      "minimum": {
+        "$id": "#minimum",
+        "type": "number"
+      },
+      "maxLength": {
+        "$id": "#maxLength",
+        "type": "integer",
+        "minimum": 0
+      },
+      "minLength": {
+        "$id": "#minLength",
+        "type": "integer",
+        "minimum": 0
+      },
+      "required": {
+        "$id": "#required",
+        "type": "array",
+        "items": { "type": "string" },
+        "uniqueItems": true,
+        "default": []
+      },
+      "const": {
+        "$id": "#const",
+        "oneOf": [
+          { "type": "array" },
+          { "type": "boolean" },
+          { "type": "integer" },
+          { "type": "number" },
+          { "type": "object" },
+          { "type": "string" }
+        ]
+      },
+      "enum": {
+        "$id": "#enum",
+        "type": "array"
+      },
+      "readOnly": {
+        "$id": "#readOnly",
+        "type": "boolean"
+      },
+      "contentMediaType": {
+        "$id": "#contentMediaType",
+        "type": "string"
+      },
+      "lightning": {
+        "type1": {
+          "$id": "#lightning__type",
+          "type": "string",
+          "lightning:typeValidator": true
+        },
+        "textIndexed": {
+          "$id": "#lightning__textIndexed",
+          "type": "boolean"
+        },
+        "localizable": {
+          "$id": "#lightning__localizable",
+          "type": "boolean"
+        },
+        "uiOptions": {
+          "$id": "#lightning__uiOptions",
+          "type": "object",
+          "anyOf": [{ "required": ["placeholderText"] }],
+          "properties": {
+            "placeholderText": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "allowedUrlSchemes": {
+          "$id": "#lightning__allowedUrlSchemes",
+          "type": "array"
+        }
+      },
+      "cpt_properties": {
+        "$id": "#cpt_properties",
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "./propertyType.schema.json"
+        }
+      },
+      "unevaluatedProperties": {
+        "$id": "#unevaluatedProperties",
+        "type": "boolean"
+      }
+  }
+}
+  
