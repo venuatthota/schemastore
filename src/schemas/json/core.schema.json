@@ -77,11 +77,6 @@
         "type": "string"
       },
       "lightning": {
-        "type1": {
-          "$id": "#lightning__type",
-          "type": "string",
-          "lightning:typeValidator": true
-        },
         "textIndexed": {
           "$id": "#lightning__textIndexed",
           "type": "boolean"
