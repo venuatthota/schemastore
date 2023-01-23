@@ -1,0 +1,32 @@
+{
+    "$schema": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json",
+    "title": "Metaschema for Custom Property Types",
+    "type": "object",
+    "sfdc_cms:refSiblingValidation": true,
+    "sfdc_cms:objectTypeValidation": true,
+    "sfdc_cms:namespaceValidation": true,
+    "properties": {
+      "$schema": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/$schema"},
+      "title": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/title"},
+      "description": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/description"},
+      "$ref": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/$ref"},
+      "lightning:type": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/lightning/type"},
+      "maximum": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/maximum"},
+      "minimum": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/minimum"},
+      "maxLength": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/maxLength"},
+      "minLength": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/minLength"},
+      "required": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/required"},
+      "unevaluatedProperties": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/unevaluatedProperties", "const": false},
+      "properties": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/cpt_properties"},
+      "const": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/const"},
+      "enum": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/enum"},
+      "readOnly": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/readOnly"},
+      "contentMediaType": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/contentMediaType"},
+      "lightning:textIndexed": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/lightning/textIndexed"},
+      "lightning:localizable": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/lightning/localizable"},
+      "lightning:uiOptions": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/lightning/uiOptions"},
+      "lightning:allowedUrlSchemes": {"$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/core.schema.json#/definitions/lightning/allowedUrlSchemes"}
+    },
+    "additionalProperties": false,
+    "required": ["lightning:type"]
+}
