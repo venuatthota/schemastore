@@ -105,7 +105,7 @@
         "$id": "#cpt_properties",
         "type": "object",
         "additionalProperties": {
-          "$ref": "./propertyType.schema.json"
+          "$ref": "https://raw.githubusercontent.com/venuatthota/schemastore/master/src/schemas/json/propertyType.schema.json"
         }
       },
       "unevaluatedProperties": {
